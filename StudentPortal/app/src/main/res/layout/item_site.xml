@@ -2,18 +2,19 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="208dp"
-        android:layout_height="94dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginEnd="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
         android:background="#FFFFFF"
         app:cardBackgroundColor="#009688"
         app:cardCornerRadius="15dp"
-        app:cardElevation="2dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,11 +22,12 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:padding="5dp">
 
             <TextView
                 android:id="@+id/tvTitle"
-                android:layout_width="204dp"
+                android:layout_width="175dp"
                 android:layout_height="19dp"
                 android:layout_marginTop="10dp"
                 android:shadowColor="#7EFF0000"
@@ -40,8 +42,8 @@
 
             <TextView
                 android:id="@+id/tvUrl"
-                android:layout_width="201dp"
-                android:layout_height="34dp"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
                 android:layout_marginTop="8dp"
                 android:text="@string/undefined"
                 android:textAlignment="center"

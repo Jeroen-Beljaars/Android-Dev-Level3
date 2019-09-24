@@ -50,6 +50,7 @@
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="15dp"
         android:background="#009688"
+        android:elevation="2dp"
         android:text="@string/add_portal_btn"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"

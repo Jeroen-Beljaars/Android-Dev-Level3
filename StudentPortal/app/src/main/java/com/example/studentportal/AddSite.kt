@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.Toast
 import com.example.studentportal.models.Site
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_add_site.*
@@ -35,14 +36,6 @@ class AddSite : AppCompatActivity() {
     private fun onSaveClick(){
         val title = tvTitle.text.toString()
         val url = tvUrl.text.toString()
-        if (!title.isNotBlank()){
-            // Show error message telling that the title cannot be empty
-            Snackbar.make(tvTitle, "The title cannot be empty!", Snackbar.LENGTH_SHORT).show()
-        }
-        if (!url.isNotBlank()) {
-            // Show error message telling that the url cannot be empty
-            Snackbar.make(tvUrl, "The url cannot be empty!", Snackbar.LENGTH_SHORT).show()
-        }
         if(title.isNotBlank() && url.isNotBlank()) {
             // Switch activity
             val site = Site(title, url)
@@ -50,6 +43,8 @@ class AddSite : AppCompatActivity() {
             intent.putExtra(EXTRA_SITE, site)
             setResult(Activity.RESULT_OK, intent)
             finish()
+        } else {
+            Toast.makeText(this, getString(R.string.error_empty_field), Toast.LENGTH_SHORT).show()
         }
     }
 
